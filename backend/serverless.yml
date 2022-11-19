@@ -1,5 +1,5 @@
 # TODO: Change the name of the org 
-org: pamsy
+org: snippeur
 app: serverless2-api
 service: serverless-todo-app
 
@@ -22,12 +22,18 @@ provider:
 
   # Use these variables in the functions and resouorces section below. For example, 
   # ${self:provider.environment.ATTACHMENT_S3_BUCKET}
+  # environment:
+  #   TODOS_TABLE: Todos-${self:provider.stage}
+  #   TODOS_CREATED_AT_INDEX: CreatedAtIndex
+  #   ATTACHMENT_S3_BUCKET: todo-imagesv2-${self:provider.stage}
+  #   SIGNED_URL_EXPIRATION: 300
+    AUTH_0_SECRET_ID: mEtqxksm83DEstvHmWDis46CiHVO81HsoPyi0baJ9jOmaL22HcBMOc7CjnV4ZYE-
+
   environment:
     TODOS_TABLE: Todos-${self:provider.stage}
     TODOS_CREATED_AT_INDEX: CreatedAtIndex
-    ATTACHMENT_S3_BUCKET: pamsy-todo-imagesv2-${self:provider.stage}
+    ATTACHMENT_S3_BUCKET: yvan-serverless-todo-images-${self:provider.stage}
     SIGNED_URL_EXPIRATION: 300
-    AUTH_0_SECRET_ID: UjlmmH1iO1AaGTuNGpqf-DkQ9tnCt-tkEpl-Rk27YLqwsudSJPaX5hnhPZCj2SO3
 
   logs:
     # Enable API Gateway logs
